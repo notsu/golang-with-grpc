@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package greet.v1;
+
+option go_package = ".;proto";
+
+service Greeter {
+  // Unary RPC
+  rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string message = 1;
+}
+
+message Error {
+  int64 code = 1;
+  string message = 2;
+}
