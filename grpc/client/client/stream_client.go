@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"time"
 
 	client "github.com/notsu/golang-with-grpc/grpc/client/proto"
 )
@@ -19,6 +20,8 @@ func LotsOfGreetings(ctx context.Context, c client.GreeterClient) {
 		stream.Send(&client.HelloRequest{
 			Name: fmt.Sprintf("Notsu clone no.%d", i),
 		})
+
+		time.Sleep(3 * time.Second)
 	}
 
 	resp, err := stream.CloseAndRecv()

@@ -22,7 +22,7 @@ func (s *Server) LotsOfGreetings(srv proto.Greeter_LotsOfGreetingsServer) error 
 			return err
 		}
 
-		log.Printf("Receive from client: %s", in.Name)
+		log.Printf("Receive from the client name: %s", in.Name)
 
 		time.Sleep(1 * time.Second)
 

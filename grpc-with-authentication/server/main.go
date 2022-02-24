@@ -82,5 +82,5 @@ func valid(authorization []string) bool {
 	// Perform the token validation here. For the sake of this example, the code
 	// here forgoes any of the usual OAuth2 token validation and instead checks
 	// for a token matching an arbitrary string.
-	return token == "some-secret-token-2"
+	return token == "some-secret-token"
 }

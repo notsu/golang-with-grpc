@@ -22,7 +22,7 @@ func (s *Server) BidiHello(srv proto.Greeter_BidiHelloServer) error {
 			return err
 		}
 
-		log.Printf("Receive a name from the client: %s", in.Name)
+		log.Printf("Receive from the client name: %s", in.Name)
 
 		out := &proto.HelloResponse{
 			Message: fmt.Sprintf("Hello %s, how are you today?", in.Name),

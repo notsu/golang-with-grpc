@@ -11,7 +11,7 @@ import (
 
 // LotsOfReplies returns pong messages streaming back to the client
 func (s *Server) LotsOfReplies(r *proto.HelloRequest, srv proto.Greeter_LotsOfRepliesServer) error {
-	log.Printf("received: %v", r.Name)
+	log.Printf("Receive from the client name: %v", r.Name)
 
 	// use wait group to allow process to be concurrent
 	var wg sync.WaitGroup

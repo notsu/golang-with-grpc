@@ -13,7 +13,7 @@ import (
 )
 
 var (
-	method = "bidiHello"
+	method = "lotsOfGreetings"
 )
 
 func main() {
